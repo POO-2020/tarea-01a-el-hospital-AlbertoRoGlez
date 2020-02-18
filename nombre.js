@@ -1,4 +1,4 @@
-class Nombre {
+export default class Nombre {
   /**
    *
    * @param {string} nombre Nombre de la persona
@@ -26,7 +26,8 @@ class Nombre {
 }
 
 var nombre1 = new Nombre("Alberto", "Rosales", "González");
-
+/*
 console.log(nombre1.getNombreCompleto());
 console.log(nombre1.getApellidoNombre());
 console.log(nombre1.getIniciales());
+*/
