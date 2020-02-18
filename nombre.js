@@ -8,12 +8,12 @@ class Nombre {
 
   constructor(nombre, apellidoPat, apellidoMat) {
     this.nombre = nombre;
-    this.apellidoPaterno = apellidoPat;
+    this.apellidoPaterno = apellidoPat
     this.apellidoMaterno = apellidoMat;
   }
 
   getNombreCompleto() {
-      return this.nombre
+    return `Nombre Completo: ${this.nombre} ${this.apellidoPaterno} ${this.apellidoMaterno}`
   }
 
   getApellidoNombre() {}
@@ -22,3 +22,5 @@ class Nombre {
 }
 
 var nombre1 = new Nombre("Alberto", "Rosales", "González");
+
+console.log(nombre1.getNombreCompleto());
