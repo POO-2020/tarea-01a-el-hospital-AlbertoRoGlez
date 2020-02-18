@@ -6,21 +6,27 @@ class Nombre {
    * @param {string} apellidoMat Apellido materno de la persona
    */
 
-  constructor(nombre, apellidoPat, apellidoMat) {
+  constructor(nombre, apellidoPaterno, apellidoMaterno) {
     this.nombre = nombre;
-    this.apellidoPaterno = apellidoPat
-    this.apellidoMaterno = apellidoMat;
+    this.apellidoPaterno = apellidoPaterno;
+    this.apellidoMaterno = apellidoMaterno;
   }
 
   getNombreCompleto() {
-    return `Nombre Completo: ${this.nombre} ${this.apellidoPaterno} ${this.apellidoMaterno}`
+    return `${this.nombre} ${this.apellidoPaterno} ${this.apellidoMaterno}`
   }
 
-  getApellidoNombre() {}
+  getApellidoNombre() {
+    return `${this.apellidoPaterno} ${this.apellidoMaterno} ${this.nombre}`
+  }
 
-  getIniciales() {}
+  getIniciales() {
+    return `${this.nombre.charAt(0)} ${this.apellidoPaterno.charAt(0)} ${this.apellidoMaterno.charAt(0)}`
+  }
 }
 
 var nombre1 = new Nombre("Alberto", "Rosales", "González");
 
 console.log(nombre1.getNombreCompleto());
+console.log(nombre1.getApellidoNombre());
+console.log(nombre1.getIniciales());
