@@ -16,7 +16,7 @@ class Paciente {
   }
 
   getPerfil() {
-    return `${this.nombre.getNombreCompleto()}, ${this.fechaNacimiento.getFormatoCorto()}, ${this.telefono}`;
+    return `${this.nombre.getNombreCompleto()}, ${this.fechaNacimiento.getFecha()}, ${this.telefono}`;
   }
 }
 

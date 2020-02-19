@@ -1,5 +1,4 @@
-
-export default class Fecha {
+class Fecha {
   /**
    *
    * @param {number} dia valor 1...31
@@ -40,9 +39,10 @@ export default class Fecha {
   }
   getFormatoCorto() {
     let date = this.fecha.getDate();
-    let month =this.diaMes[this.fecha.getMonth()];
+    let month = this.diaMes[this.fecha.getMonth()];
+    let month1 = this.fecha.getMonth() + 1;
     let year = this.fecha.getFullYear();
-    return `${date}/${month}/${year}`;
+    return `${year}-${month1}-${date}`;
   }
 
   getFormatoExtendido() {
@@ -52,13 +52,75 @@ export default class Fecha {
     let año = this.fecha.getFullYear();
     return dia, numero, "de", mes, "de", año;
   }
+
+  getAños() {
+    let año = this.fecha.getFullYear() - this.fecha2.getUTCFullYear();
+    return año;
+  }
+
+  getMeses() {
+    let año = this.fecha.getFullYear() - this.fecha2.getUTCFullYear();
+    if (año > 0) {
+      var mes = año * 12 + this.fecha.getMonth() - this.fecha2.getUTCMonth();
+    } else {
+      var mes = this.fecha.getMonth() - this.fecha2.getUTCMonth();
+    }
+    return mes;
+  }
+
+  getSemanas() {
+    let año = this.fecha.getFullYear() - this.fecha2.getUTCFullYear();
+    if (año > 0) {
+      var mes = año * 12 + this.fecha.getMonth() - this.fecha2.getUTCMonth();
+      var semanas = mes * 4
+    } else if (año < 1) {
+      var mes = this.fecha.getMonth() - this.fecha2.getUTCMonth();
+      var semanas = mes * 4
+      
+    }if (semanas <= 0) {
+        var semanas = (this.fecha.getDate() - this.fecha2.getUTCDate()) / 7
+      }
+    return Math.trunc(semanas);
+  }
+
+  getDias() {
+    let año = this.fecha.getFullYear() - this.fecha2.getUTCFullYear();
+    if (año > 0) {
+      var mes = año * 12 + this.fecha.getMonth() - this.fecha2.getUTCMonth();
+      var semanas = mes * 4
+    } else if (año < 1) {
+      var mes = this.fecha.getMonth() - this.fecha2.getUTCMonth();
+      var semanas = mes * 4
+      
+    }if (semanas <= 0) {
+        var semanas = (this.fecha.getDate() - this.fecha2.getUTCDate()) / 7
+      }
+
+    if (mes > 0) {
+
+    } else {
+      var dias = (this.fecha.getDate() - this.fecha2.getUTCDate())
+    }
+    return dias;
+  }
+
+  getFecha() {
+    let date = this.fecha.getDate();
+    let month = this.diaMes[this.fecha.getMonth()];
+    let year = this.fecha.getFullYear();
+    return `${date}/${month}/${year}`;
+  }
+
+  getDiaFecha() {
+    let dia = this.diaSemana[this.fecha.getDay()];
+    return dia;
+  }
 }
 
-
-
-
-/*
-console.log(fecha1.getFormatoCorto());
-console.log(fecha1.getFormatoExtendido());
-console.log(fecha1.getEdad());
-*/
+let fecha1 = new Fecha(28, 3, 2020);
+console.log(fecha1.getAños());
+console.log(fecha1.getMeses());
+console.log(fecha1.getSemanas());
+console.log(fecha1.getDias());
+console.log(fecha1.getFecha());
+console.log(fecha1.getDiaFecha());
