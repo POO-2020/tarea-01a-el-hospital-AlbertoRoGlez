@@ -25,5 +25,6 @@ let paciente1 = new Paciente(
   new FechaNacimiento(17, 2, 2001),
   "312-126-2988"
 );
-
+/*
 console.log(paciente1.getPerfil());
+*/
