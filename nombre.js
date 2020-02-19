@@ -1,4 +1,4 @@
-class Nombre {
+export default class Nombre {
   /**
    *
    * @param {string} nombre Nombre de la persona
