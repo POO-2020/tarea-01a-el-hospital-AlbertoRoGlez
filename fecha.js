@@ -1,5 +1,5 @@
 
-export default class FechaNacimiento {
+export default class Fecha {
   /**
    *
    * @param {number} dia valor 1...31
