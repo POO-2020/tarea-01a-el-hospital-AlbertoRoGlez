@@ -1,3 +1,4 @@
+
 export default class Nombre {
   /**
    *
@@ -21,11 +22,11 @@ export default class Nombre {
   }
 
   getIniciales() {
-    return `${this.nombre.charAt(0)} ${this.apellidoPaterno.charAt(0)} ${this.apellidoMaterno.charAt(0)}`
+    return `${this.nombre.charAt(0)}${this.apellidoPaterno.charAt(0)}${this.apellidoMaterno.charAt(0)}`
   }
 }
 
-var nombre1 = new Nombre("Alberto", "Rosales", "González");
+
 /*
 console.log(nombre1.getNombreCompleto());
 console.log(nombre1.getApellidoNombre());

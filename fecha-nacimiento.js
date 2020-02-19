@@ -1,3 +1,4 @@
+
 export default class FechaNacimiento {
   /**
    *
@@ -39,7 +40,7 @@ export default class FechaNacimiento {
   }
   getFormatoCorto() {
     let date = this.fecha.getDate();
-    let month = this.fecha.getMonth() + 1;
+    let month =this.diaMes[this.fecha.getMonth()];
     let year = this.fecha.getFullYear();
     return `${date}/${month}/${year}`;
   }
@@ -54,7 +55,7 @@ export default class FechaNacimiento {
 }
 
 
-var fecha1 = new FechaNacimiento(7,2,2000);
+
 
 /*
 console.log(fecha1.getFormatoCorto());
