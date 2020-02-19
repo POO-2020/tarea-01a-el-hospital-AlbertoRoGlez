@@ -97,6 +97,9 @@ class Fecha {
       }
 
     if (mes > 0) {
+      let x = this.fecha - Date.now(); 
+      let z = 1000 * 60 * 60 * 24;
+      var dias = Math.trunc(x / z);
 
     } else {
       var dias = (this.fecha.getDate() - this.fecha2.getUTCDate())
@@ -117,7 +120,7 @@ class Fecha {
   }
 }
 
-let fecha1 = new Fecha(28, 3, 2020);
+let fecha1 = new Fecha(29, 2, 2020);
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
 console.log(fecha1.getSemanas());
