@@ -1,4 +1,4 @@
-class Fecha {
+export default class Fecha {
   /**
    *
    * @param {number} dia valor 1...31
@@ -119,7 +119,7 @@ class Fecha {
     return dia;
   }
 }
-
+/*
 let fecha1 = new Fecha(29, 2, 2030);
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
@@ -127,3 +127,4 @@ console.log(fecha1.getSemanas());
 console.log(fecha1.getDias());
 console.log(fecha1.getFecha());
 console.log(fecha1.getDiaFecha());
+*/

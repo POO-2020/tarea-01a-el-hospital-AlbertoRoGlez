@@ -1,4 +1,4 @@
-class Tiempo {
+export default class Tiempo {
     /**
      * 
      * @param {number} hora 
@@ -19,7 +19,8 @@ class Tiempo {
         let fulltime = this.hora - 12
         return `${fulltime}:${this.minutos}`
     }
-}   
+}   /*
     let tiempo1 = new Tiempo (12, 30, "a.m")
     console.log(tiempo1.getFormato12());
     console.log(tiempo1.getFormato24());
+    */
