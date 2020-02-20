@@ -120,7 +120,7 @@ class Fecha {
   }
 }
 
-let fecha1 = new Fecha(29, 2, 2020);
+let fecha1 = new Fecha(29, 2, 2030);
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
 console.log(fecha1.getSemanas());
