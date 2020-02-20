@@ -1,4 +1,4 @@
-import Fecha from "./fecha.js/index.js"
+import Fecha from "./fecha.js"
 import Nombre from "./nombre.js"
 
 export default class Paciente {
