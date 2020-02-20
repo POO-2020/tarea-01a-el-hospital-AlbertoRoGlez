@@ -19,12 +19,11 @@ export default class Paciente {
     return `${this.nombre.getNombreCompleto()}, ${this.fechaNacimiento.getFecha()}, ${this.telefono}`;
   }
 }
-
+/*
 let paciente1 = new Paciente(
   new Nombre("Alberto", "Rosales", "González"),
   new Fecha(17, 2, 2001),
   "312-126-2988"
 );
-/*
 console.log(paciente1.getPerfil());
 */

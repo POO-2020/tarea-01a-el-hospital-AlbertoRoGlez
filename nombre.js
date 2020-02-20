@@ -3,8 +3,8 @@ export default class Nombre {
   /**
    *
    * @param {string} nombre Nombre de la persona
-   * @param {string} apellidoPat Apellido paterno de la persona
-   * @param {string} apellidoMat Apellido materno de la persona
+   * @param {string} apellidoPaterno Apellido paterno de la persona
+   * @param {string} apellidoMaterno Apellido materno de la persona
    */
 
   constructor(nombre, apellidoPaterno, apellidoMaterno) {

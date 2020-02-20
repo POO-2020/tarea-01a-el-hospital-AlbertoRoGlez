@@ -3,7 +3,7 @@ export default class Tiempo {
      * 
      * @param {number} hora 
      * @param {number} minutos 
-     * @param {string} periodo a.m o p.m
+     * @param {string} periodo am o pm
      */
     constructor (hora, minutos, periodo) {
         this.hora = hora;
@@ -12,13 +12,15 @@ export default class Tiempo {
     }
 
     getFormato12() {
-        return `${this.hora}:${this.minutos} ${this.periodo}`
-    }
-
-    getFormato24() {
-        let fulltime = this.hora - 12
-        return `${fulltime}:${this.minutos}`
-    }
+        return `${this.hora}:${this.minutos} ${this.periodo}`;
+      }
+      getFormato24() {
+        if (this.periodo == "pm") {
+          return `${this.hora + 12}:${this.minutos}`;
+        } else if (this.periodo == "am") {
+          return `${this.hora}:${this.minutos}`;
+        }
+      }
 }   /*
     let tiempo1 = new Tiempo (12, 30, "a.m")
     console.log(tiempo1.getFormato12());
