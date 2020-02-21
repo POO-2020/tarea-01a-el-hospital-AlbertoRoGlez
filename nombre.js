@@ -1,10 +1,9 @@
-
 export default class Nombre {
   /**
    *
-   * @param {string} nombre Nombre de la persona
-   * @param {string} apellidoPaterno Apellido paterno de la persona
-   * @param {string} apellidoMaterno Apellido materno de la persona
+   * @param {string} nombre | Nombre del paciente
+   * @param {string} apellidoPaterno | Apellido paterno del paciente
+   * @param {string} apellidoMaterno | Apellido materno del paciente
    */
 
   constructor(nombre, apellidoPaterno, apellidoMaterno) {
@@ -14,21 +13,16 @@ export default class Nombre {
   }
 
   getNombreCompleto() {
-    return `${this.nombre} ${this.apellidoPaterno} ${this.apellidoMaterno}`
+    return `${this.nombre} ${this.apellidoPaterno} ${this.apellidoMaterno}`;
   }
 
   getApellidoNombre() {
-    return `${this.apellidoPaterno} ${this.apellidoMaterno} ${this.nombre}`
+    return `${this.apellidoPaterno} ${this.apellidoMaterno} ${this.nombre}`;
   }
 
   getIniciales() {
-    return `${this.nombre.charAt(0)}${this.apellidoPaterno.charAt(0)}${this.apellidoMaterno.charAt(0)}`
+    return `${this.nombre.charAt(0)}${this.apellidoPaterno.charAt(
+      0
+    )}${this.apellidoMaterno.charAt(0)}`;
   }
 }
-
-
-/*
-console.log(nombre1.getNombreCompleto());
-console.log(nombre1.getApellidoNombre());
-console.log(nombre1.getIniciales());
-*/
